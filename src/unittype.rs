@@ -20,56 +20,56 @@ pub struct UnitType {
     /// Supply
     pub supply: R32,
     /// None for untransportable
-    cargo_size: Option<u32>,
+    pub cargo_size: Option<u32>,
     /// None if cannot transport units
-    cargo_capacity: Option<u32>,
+    pub cargo_capacity: Option<u32>,
     /// Max hp
-    max_health: u32,
+    pub max_health: u32,
     /// Max shield
-    max_shield: Option<u32>,
+    pub max_shield: Option<u32>,
     /// Armor
-    armor: u32,
+    pub armor: u32,
     /// Vision range
-    sight: R32,
+    pub sight: R32,
     /// None if not detector
-    detection_range: Option<R32>,
+    pub detection_range: Option<R32>,
     /// Speed without upgrades of buffs, None if cannot move at all
-    speed: Option<R32>,
+    pub speed: Option<R32>,
     /// Creep speed multiplier without upgrades of buffs
-    speed_creep_mul: Option<R32>,
+    pub speed_creep_mul: Option<R32>,
     /// Max energy
-    max_energy: Option<u32>,
+    pub max_energy: Option<u32>,
     /// Start energy
-    start_energy: Option<u32>,
+    pub start_energy: Option<u32>,
     /// List of weapons, sorted by priority
-    weapons: Vec<Weapon>,
+    pub weapons: Vec<Weapon>,
     /// Attributes
-    attributes: HashSet<Attribute>,
+    pub attributes: HashSet<Attribute>,
     /// A list of abilities and their requirements
-    abilities: Vec<UnitAbilityReq>,
+    pub abilities: Vec<UnitAbilityReq>,
     /// Building size on grid, not available for non-structures
-    placement_size: Option<u32>,
+    pub placement_size: Option<u32>,
     /// Radius approximating the size of the unit.
     #[serde(default)] // TODO: remove this and require
-    radius: R32,
+    pub radius: R32,
     /// Produces pylon power with this radius
-    power_radius: Option<R32>,
+    pub power_radius: Option<R32>,
     /// Terran add-on can be used with this structure
-    accepts_addon: bool,
+    pub accepts_addon: bool,
     /// Requires a pylon power to function
-    needs_power: bool,
+    pub needs_power: bool,
     /// Requires creep for placement
-    needs_creep: bool,
+    pub needs_creep: bool,
     /// Requires a vespene gayser for placement
-    needs_gayser: bool,
+    pub needs_gayser: bool,
     /// Structure attribute is set
-    is_structure: bool,
+    pub is_structure: bool,
     /// Can be used as an add-on
-    is_addon: bool,
+    pub is_addon: bool,
     /// Workers: Probe, Drone, SCV
-    is_worker: bool,
+    pub is_worker: bool,
     /// Flying buildings not included
-    is_townhall: bool,
+    pub is_townhall: bool,
 }
 impl PartialEq for UnitType {
     fn eq(&self, other: &Self) -> bool {
