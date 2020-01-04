@@ -48,7 +48,7 @@ pub struct UnitType {
     /// A list of abilities and their requirements
     pub abilities: Vec<UnitAbilityReq>,
     /// Building size on grid, not available for non-structures
-    pub placement_size: Option<u32>,
+    pub size: Option<u32>,
     /// Radius approximating the size of the unit.
     #[serde(default)] // TODO: remove this and require
     pub radius: R32,
@@ -60,8 +60,8 @@ pub struct UnitType {
     pub needs_power: bool,
     /// Requires creep for placement
     pub needs_creep: bool,
-    /// Requires a vespene gayser for placement
-    pub needs_gayser: bool,
+    /// Requires a vespene geyser for placement
+    pub needs_geyser: bool,
     /// Structure attribute is set
     pub is_structure: bool,
     /// Can be used as an add-on
@@ -70,7 +70,11 @@ pub struct UnitType {
     pub is_worker: bool,
     /// Flying buildings not included
     pub is_townhall: bool,
+    /// Is unit flying
+    pub is_flying: bool,
+
 }
+
 impl PartialEq for UnitType {
     fn eq(&self, other: &Self) -> bool {
         self.id == other.id

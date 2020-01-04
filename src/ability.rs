@@ -44,7 +44,7 @@ pub enum AbilityTarget {
     TrainPlace(AbilityUnit),
     /// Normal structures
     Build(AbilityUnit),
-    /// Vespene gaysers
+    /// Vespene geysers
     BuildOnUnit(AbilityUnit),
     /// Add-ons
     BuildInstant(AbilityUnit),
