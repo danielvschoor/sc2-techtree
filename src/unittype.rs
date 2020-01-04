@@ -24,9 +24,9 @@ pub struct UnitType {
     /// None if cannot transport units
     pub cargo_capacity: Option<u32>,
     /// Max hp
-    pub max_health: u32,
+    pub max_health: R32,
     /// Max shield
-    pub max_shield: Option<u32>,
+    pub max_shield: Option<R32>,
     /// Armor
     pub armor: R32,
     /// Vision range
@@ -38,7 +38,7 @@ pub struct UnitType {
     /// Creep speed multiplier without upgrades of buffs
     pub speed_creep_mul: Option<R32>,
     /// Max energy
-    pub max_energy: Option<u32>,
+    pub max_energy: Option<R32>,
     /// Start energy
     pub start_energy: Option<u32>,
     /// List of weapons, sorted by priority
