@@ -28,7 +28,7 @@ pub struct UnitType {
     /// Max shield
     pub max_shield: Option<u32>,
     /// Armor
-    pub armor: u32,
+    pub armor: f32,
     /// Vision range
     pub sight: R32,
     /// None if not detector
