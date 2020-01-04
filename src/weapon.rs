@@ -22,25 +22,25 @@ pub enum WeaponTargetType {
 #[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq)]
 pub struct WeaponBonus {
     /// Bonus affects attacks against units having this attribute
-    against: Attribute,
+    pub against: Attribute,
     /// The amount of bonus damage per hit
-    damage: R32,
+    pub damage: R32,
 }
 
 /// Weapon
 #[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq)]
 pub struct Weapon {
-    target_type: WeaponTargetType,
+    pub target_type: WeaponTargetType,
     /// Damage per hit, no upgrades
-    damage_per_hit: R32,
+    pub damage_per_hit: R32,
     /// Percentage
-    damage_splash: R32,
+    pub damage_splash: R32,
     /// Attacks per one attack tick, e.g. 2 for Colossus
-    attacks: u32,
+    pub attacks: u32,
     /// Range
-    range: R32,
+    pub range: R32,
     /// Cooldown
-    cooldown: R32,
+    pub cooldown: R32,
     /// Bonuses
-    bonuses: Vec<WeaponBonus>,
+    pub bonuses: Vec<WeaponBonus>,
 }
