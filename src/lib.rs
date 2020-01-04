@@ -67,7 +67,11 @@ impl TechData {
     pub fn from_json(source: &str) -> Result<Self, DeserializeError> {
         serde_json::from_str::<TechData>(source)
     }
-
+    
+    /// Load data from a json file
+    pub fn from_path(source: &str) -> Self{
+        serde_json::from_str::<TechData>(source).expect("Invalid bundled data")
+    }
     /// Get an ability by id
     pub fn ability(&self, ability_id: AbilityId) -> Option<Ability> {
         for ability in &self.abilities {
