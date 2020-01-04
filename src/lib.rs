@@ -5,9 +5,6 @@
 #![warn(clippy::all)]
 #![deny(missing_docs)]
 #![forbid(unused_must_use)]
-// Features
-#![feature(type_alias_enum_variants)]
-#![feature(bind_by_move_pattern_guards)]
 
 use std::collections::HashSet;
 
