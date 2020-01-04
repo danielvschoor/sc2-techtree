@@ -30,6 +30,7 @@ pub struct WeaponBonus {
 /// Weapon
 #[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq)]
 pub struct Weapon {
+    /// Type of targer(Air, Ground, Any)
     pub target_type: WeaponTargetType,
     /// Damage per hit, no upgrades
     pub damage_per_hit: R32,
