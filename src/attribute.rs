@@ -13,7 +13,7 @@ pub enum Attribute {
     Biological,
     Mechanical,
     Psionic,
-    Heroic
+    Heroic,
     Summoned,
     Robotic,
     Hover
