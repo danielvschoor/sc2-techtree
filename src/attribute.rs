@@ -13,7 +13,10 @@ pub enum Attribute {
     Biological,
     Mechanical,
     Psionic,
+    Heroic
     Summoned,
+    Robotic,
+    Hover
 }
 
 /// Unit movement type
